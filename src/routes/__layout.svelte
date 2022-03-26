@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href={ carbonDarkTheme }  />
+	<link rel="stylesheet" href='https://unpkg.com/carbon-components-svelte/css/g90.css'  />
 </svelte:head>
 
 <div class=" min-h-screen w-screen overflow-x-hidden font-mono ">
