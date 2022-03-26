@@ -7,26 +7,21 @@
 	import TopNav from '$lib/TopNav.svelte';
 
 
-	const lightTheme = 'https://unpkg.com/carbon-components-svelte/css/g10.css';
-	const darkTheme = 'https://unpkg.com/carbon-components-svelte/css/g90.css';
+
+	let lightModeActive = false;
 	
-
-	let activeTheme = darkTheme
-
-
+	const carbonDarkTheme = 'https://unpkg.com/carbon-components-svelte/css/g90.css';
 	function toggleTheme() {
-        alert("Changing Theme")
-	    if(activeTheme=== darkTheme ){
-			 activeTheme = lightTheme
-		}else{
-			activeTheme = darkTheme
+		if (lightModeActive) {
+			lightModeActive = false;
+		} else {
+			lightModeActive = true;
 		}
-        
 	}
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href={activeTheme} />
+	<link rel="stylesheet" href={ carbonDarkTheme }  />
 </svelte:head>
 
 <div class=" min-h-screen w-screen overflow-x-hidden font-mono ">
